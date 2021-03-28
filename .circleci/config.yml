@@ -14,6 +14,6 @@ workflows:
           parallel: false # split all specs across machines
           parallelism: 1 # use 4 CircleCI machines to finish quickly
           group: 'all tests' # name this group "all tests" on the dashboard
-          start: 'npm start' # start server before running tests
+          start: 'COVERAGE=true ./node_modules/.bin/ember s' # start server before running tests
           wait-on: 'http://localhost:4200'
           #spec: cypress/integration/first_test.spec.js
